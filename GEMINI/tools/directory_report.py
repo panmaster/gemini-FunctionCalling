@@ -1,5 +1,6 @@
 import os
 from typing import Dict, List  # Import Dict and List
+
 # Define ANSI escape codes for colors
 reset = "\033[0m"
 black = "\033[30m"
@@ -19,8 +20,9 @@ bright_magenta = "\033[95m"
 bright_cyan = "\033[96m"
 bright_white = "\033[97m"
 
+
 def directory_report(path: str = None, summary_file_name: str = "directory_summary.txt",
-                    return_type: str = "all") -> str or Dict or List[Dict]:
+                    return_type: str = "all") -> str or Dict or List[Dict] or tuple:
     """Generates a report on the directory structure and file contents.
 
     Args:
@@ -109,6 +111,7 @@ def save_to_file(report_str: str, summary_file_name: str, path: str):
             f.write(report_str)
     except Exception as e:
         print(f"{red}Error saving report to file: {e}")
+
 
 # Description for function and variables
 directory_report_description = {
