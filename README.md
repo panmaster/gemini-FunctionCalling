@@ -3,7 +3,7 @@ put  it  to folder: tools
 
  create funcion and   create function_description : 
 
-< import  os
+``` import  os
 reset = "\033[0m"
 black = "\033[30m"
 red = "\033[31m"
@@ -79,4 +79,4 @@ save_to_file_description = {
             }
         }
     ]
-}>
+}```
